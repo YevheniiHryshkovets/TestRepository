@@ -11,7 +11,7 @@ namespace ConsoleAppForTests
     {
         public IEnumerator<int> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
