@@ -43,7 +43,13 @@ namespace ConsoleAppForTests
 
         public IEnumerator<T> GetEnumerator()
         {
-            return new QueueEnumerator(this);
+            var current = head;
+            while (current != null)
+            {
+                yield return current.Value;
+                current = current.Next;
+            }
+
         }
 
         IEnumerator IEnumerable.GetEnumerator()

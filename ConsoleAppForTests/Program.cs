@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ConsoleAppForTests
@@ -10,16 +11,12 @@ namespace ConsoleAppForTests
     {
         static void Main(string[] args)
         {
-
-            Queue<int> queue = new Queue<int>();
-            queue.EnQueue(1);
-            queue.EnQueue(2);
-            queue.EnQueue(3);
-            queue.EnQueue(4);
-
-            foreach (var i in queue) { Console.WriteLine(i); }
-            Console.ReadKey();
-
+            foreach (var item in new FibonacciSecuense()) 
+            { 
+                Console.WriteLine(item);
+                Thread.Sleep(100);
+                if(Console.KeyAvailable) { break; }
+            }
         }
 
          public static T GetMaxOrDefault<T>(T[] source)
