@@ -11,12 +11,7 @@ namespace ConsoleAppForTests
     {
         static void Main(string[] args)
         {
-            foreach (var item in new FibonacciSecuense()) 
-            { 
-                Console.WriteLine(item);
-                Thread.Sleep(100);
-                if(Console.KeyAvailable) { break; }
-            }
+            
         }
 
          public static T GetMaxOrDefault<T>(T[] source)
